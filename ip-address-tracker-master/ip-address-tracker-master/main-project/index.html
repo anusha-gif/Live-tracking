@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- Lefleat.js CSS API File-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="hero">
+        <h1 class="title">IP Address Tracker</h1>
+        <div class="search-bar">
+          <form class="search-form">
+            <input
+              type="search"
+              name="query"
+              placeholder="Search for any IP address or domain"
+            />
+            <button class="button-arrow"></button>
+          </form>
+        </div>
+      </div>
+      <div class="app-bar">
+        <div class="app-bar__element">
+          <h2 class="app-bar__title">IP Address</h2>
+          <div class="ip app-bar__info">193.62.157.66</div>
+        </div>
+        <div class="app-bar__element">
+          <h2 class="app-bar__title">Location</h2>
+          <div class="location app-bar__info">London</div>
+        </div>
+        <div class="app-bar__element">
+          <h2 class="app-bar__title">Timezone</h2>
+          <div class="timezone app-bar__info">UTC+01:00</div>
+        </div>
+        <div class="app-bar__element">
+          <h2 class="app-bar__title">ISP</h2>
+          <div class="isp app-bar__info">Jisc Services Limited</div>
+        </div>
+      </div>
+      <div id="mapid"></div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.damiandrewnik.com">Damian Drewnik</a>.  Made it a comment to avoid crashing map
+    </div>-->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!--Lefleat.js Map API Script-->
+    <script src="scripts/location.js"></script>
+  </body>
+</html>
